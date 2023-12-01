@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in html</title>
+</head>
+
+<body>
+    <div>
+        <form action="form.php">
+            <h1>Registration form for trip</h1>
+            <input type="text" placeholder="Enter your name" /><br />
+            <h4>Select your Section</h4>
+            <lable for="sectionA">
+                <input type="radio" value="Section A" name="section" id="sectionA" />Section A
+            </lable>
+            <lable for="sectionB">
+                <input type="radio" value="Section B" name="section" id="sectionB" />Section B
+            </lable>
+            <lable for="sectionC">
+                <input type="radio" value="Section C" name="section" id="sectionC" />Section C
+            </lable><br>
+            <textarea name="why" id="why" cols="10" rows="10" placeholder="why do uh want to go on this trip?"></textarea><br>
+            <select name="car" id="car">
+                <option value="default">Select your car</option>
+                <option value="Honda civic">Honda civic</option>
+                <option value="Honda city">Honda city</option>
+                <option value="rexton">rexton</option>
+            </select>
+        </form>
+    </div>
+        <h1> CREATE YOUR ACCOUNT</h1>
+        <table cellspacing="2" align="center" cellpadding="8"
+        border="0">
+        <tr><td> Name</td>
+        <td><input type="text" placeholder="Enter your name"
+        id="n1"></td></tr>
+        <tr><td>Email </td>
+        <td><input type="text" placeholder="Enter your email id"
+        id="e1"></td></tr>
+        <tr><td> Set Password</td>
+        <td><input type="password" placeholder="Set a password"
+        id="p1"></td></tr>
+        <tr><td>Confirm Password</td>
+        <td><input type="password" placeholder="Confirm your password" id="p2"></td></tr>
+        <tr><td>
+        <input type="submit" value="Create"
+        onClick="create_account()"/>
+        </table>
+        <script type="text/javascript">
+        function create_account(){ 
+        var n=document.getElementById("n1").value; 
+        var e=document.getElementById("e1").value; 
+        var p=document.getElementById("p1").value; 
+        var cp=document.getElementById("p2").value; 
+        //Code for password validation 
+        var letters = /^[A-Za-z]+$/; 
+        var email_val =
+        /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4
+        })+$/; 
+        //other validations required code 
+        if(n==''||e==''||p==''||cp==''){ 
+        alert("Enter each details correctly"); 
+        } 
+        else if(!letters.test(n)) 
+         {
+        alert('Name is incorrect must contain alphabets
+        only'); 
+         } 
+        else if (!email_val.test(e)) 
+         { 
+        alert('Invalid email format please enter valid
+        email id'); 
+         } 
+        else if(p!=cp) 
+        { 
+        alert("Passwords not matching"); 
+        } 
+        else if(document.getElementById("p1").value.length > 12) 
+        { 
+        alert("Password maximum length is 12"); 
+        } 
+        else if(document.getElementById("p1").value.length < 6) 
+        { 
+        alert("Password minimum length is 6"); 
+        } 
+        else{ 
+        alert("Your account has been created successfully...
+        Redirecting to google.com"); 
+        window.location="https://www.google.com/"; 
+        } 
+        } 
+        </script>
+    
+</body>
+
+</html>

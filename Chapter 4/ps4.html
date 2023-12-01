@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Tourist Agency</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <h1>Book a vaction packages</h1>
+            <h4>Register your name</h4>
+            <input type="text" placeholder="Enter your name">
+            <h4>Gender</h4>
+            <label for="1">
+                Male
+                <input type="radio" name="gender" id="1" value="Male">
+            </label>
+            <label for="2">
+                Female
+                <input type="radio" name="gender" id="2" value="Female">
+            </label>
+            <label for="3">
+                Others
+                <input type="radio" name="gender" id="3" value="Others">
+            </label><br><br>
+            <select>
+                <option value="default">Select where you wanna go for trip</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="North America">North America</option>
+                <option value="South America">South America</option>
+                <option value="Africa">Africa</option>
+                <option value="Antartica">Antartica</option>
+            </select>
+        </form>
+    </div>
+    <h3> LOGIN </h3>
+    <formform="Login_form" onsubmit="submit_form()">
+        <h4> USERNAME</h4>
+        <input type="text" placeholder="Enter your email id" />
+        <h4> PASSWORD</h4>
+        <input type="password" placeholder="Enter your
+password" /></br></br>
+        <input type="button" value="Login" onclick="submit_form()" />
+        <input type="button" value="SignUp" onClick="create()" />
+        </form>
+        <script type="text/javascript">
+            function submit_form() {
+                alert("Login successfully");
+            }
+            function create() {
+                window.location = "demo.html";
+            } 
+        </script>
+</body>
+
+</html>
